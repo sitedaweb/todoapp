@@ -1,0 +1,314 @@
+@font-face {
+    font-family: 'futura';
+    src: url("futura-book.ttf")
+}
+@font-face {
+	font-family: 'product sans';
+	font-style: normal;
+	font-weight: 400;
+	src: url("ProductSans.woff2");
+}
+* {
+    font-family: futura;
+    user-select: none;
+}
+body {
+	max-width: 100%;
+       max-height: 100%;
+	overflow: hidden !important;
+}
+html, body {
+       padding: 0;
+       margin: 0;
+}
+h1, label, h2 {
+	font-family: "product sans", futura;
+}
+h2  {
+	font-size: 30px;
+}
+h1 {
+	text-align: center;
+	height: 45px;
+}
+body {
+	background-color: white;
+	text-align: center;
+}
+
+#corpo,  #header {
+	display: none;
+	padding: 0;
+}
+ #header {
+		background-color: white;
+		padding: 10px;
+		border-bottom-right-radius: 25px;
+		border-bottom-left-radius: 25px;
+		max-height: 120px;
+		line-height: 5em;
+		transition: 0.2s;
+		text-align: center;
+		
+	}
+
+	
+#msg , #msg2 {
+    	visibility: hidden; 
+    	margin-left: -125px;
+    	background-color: rgba(10, 10, 10);
+    	color: rgb(255, 114, 94);
+    	opacity: 0.9;
+    	text-align: center; 
+    	border-radius: 2px;
+    	padding: 16px; 
+    	width: 60%;
+    	position: fixed; 
+    	z-index: 1;
+    	box-sizing: border-box;
+    	right: 20%;
+    	bottom: 30px;
+    	border-radius: 8px;
+    	user-select: none;
+	
+}
+
+#msg.mostrar, #msg2.mostrar {
+   		visibility: visible;
+ 		-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  		 animation: fadein 0.5s, fadeout 0.5s 2.5s;
+	}
+
+	@-webkit-keyframes fadein {
+  		from {bottom: 0; opacity: 0;}
+  		to {bottom: 30px; opacity: 0.9;}
+	}
+
+	@keyframes fadein {
+  		from {bottom: 0; opacity: 0;}
+  		to {bottom: 30px; opacity: 0.9;}
+	}
+
+	@-webkit-keyframes fadeout {
+  		from {bottom: 30px; opacity: 0.9;}
+  		to {bottom: 0; opacity: 0;}
+	}
+
+	@keyframes fadeout {
+ 		 from {bottom: 30px; opacity: 0.9;}
+  		to {bottom: 0; opacity: 0;}
+	}
+
+#adicionar {
+	border-radius: 50px;
+	background-color: rgb(255, 114, 94);
+	border: none;
+	width: 70px;
+	height: 70px;
+	font-size: 20px;
+	outline: 0;
+       color: white;
+}
+#adicionar:active {
+	background-color: brown;
+}
+.v-atividade {
+	background-color: rgb(255, 114, 94);
+	height: 150px;
+	margin-bottom: 1px;
+       width: 100%;
+	padding: 5px;
+	/*overflow: hidden;*/
+	user-select: none;
+       box-sizing: border-box;
+}
+.data {
+	float: right;
+}
+.titulo {
+	font-size: 23px;
+}
+
+.atividade {
+	margin-top: 40px;
+      padding: 0;
+      box-sizing: border-box;
+      width: 100%;
+      overflow-x: auto;
+      position: relative;
+}
+	::selection {
+		background-color: black;
+		color: rgb(255, 114, 94);
+	}
+.campo, .menu {
+	position: fixed;
+	bottom: 0;
+	border-radius: 20px 20px 0 0;
+	height: 250px;
+	background: white;
+	width: 100%;
+	left: 0;
+	text-align: center;
+	z-index: 2;
+	background: rgb(60, 60, 60);
+	overflow: hidden;
+	display: none;
+	transition: transform .2s ease;
+	transform: translateY(100%);
+}
+
+.campo .cabeca , .menu .cabeca {
+	color: white;
+	width: 100%;
+	height: 50px;
+	display: block;
+	
+}
+.campo .cabeca > div, .menu .cabeca > div {
+	float: left;
+	width: 33.3%;
+	height: 100%;
+	
+}
+#cancelar--campo, #cancelar--menu {
+	color: red;
+}
+#cancelar--campo:active {
+	color: white;
+}
+
+#concluido--campo, #cancelar--campo, #cancelar--menu, #apagar-tudo {
+	font-size: 11px;
+}
+
+.barra-de-rolagem {
+	display: block;
+	margin-bottom: 10px;
+	height: 40px; 
+}
+#entradas {
+	text-align: left !important;
+	padding: 10px;
+}
+#entradas input {
+	width: 100%;
+	display: block;
+	outline: 0;
+	text-indent: 34px;
+	height: 30px;
+	border: none;
+	font-size: 20px;
+	border-bottom: 0.3px solid gray;
+	color: white;
+}
+#hora {
+	background: url("imagem/relogio.png") no-repeat 5px 50%;
+	background-size: 20px 20px;
+	margin-top: 20px;
+	color: gray;
+}
+#titulo {
+	background: url("imagem/titulo.png") no-repeat 5px 50%;
+	background-size: 20px 20px;
+}
+.barra-de-rolagem span::after {
+	content: '';
+	background: gray;
+	width: 40px;
+	display: inline-block;
+	height: 3.5px;
+	border-radius: 8px;
+}
+	
+body {
+	background: rgb(50, 50, 50);
+	text-align: left;
+}
+#corpo,  #header {
+	display: block;
+}
+h1 {
+	text-align: left;
+}
+.campo {
+	height: 250px;
+}
+
+span  img {
+	width: 22px;
+	height: 22px;
+	vertical-align: middle;
+	}
+p img {
+	width: 22px;
+	height: 22px;
+	vertical-align: 0px;
+}
+/*body {
+	max-height: 100%;
+	overflow: hidden;
+}*/
+.campo {
+	transition: none;
+}
+.sem-transicao {
+	transition: none !important;
+}
+.desativado {
+	pointer-events: none;
+}
+@keyframes abrir {
+	from {transform: translateX(100%);}
+	to {transform: translateX(0);}
+}
+#menu {
+       position: absolute;
+       top: 44.4px;
+       right: 10px;
+	height: 60px;
+}
+
+#corpo {
+       overflow-y: scroll;
+}
+
+.menu .barra-de-rolagem ~ div {
+	padding: 15px;
+	height: 55px;
+       text-align: left;
+	width: 100%;
+       color: white;
+      
+       box-sizing: border-box;
+}
+
+.menu .barra-de-rolagem ~ div span {
+       float: right;
+	color: gray;
+}
+.menu .barra-de-rolagem ~ div {
+	border-radius: 27px;
+	background-color: rgb(50, 50, 50);
+	width: 95%;
+	margin-left: 2.5%;
+       margin-bottom: 5px;
+}
+a { 
+       color: white;
+       text-decoration: none;
+       width: 100%;
+       display: inline-block;
+}
+.menu {
+	height: 300px;
+}
+select {
+	background: none;
+	border: none;
+	outline: 0;
+	color: gray;
+}
+#corpo .atividade {
+	overflow-y: scroll !important;
+}
